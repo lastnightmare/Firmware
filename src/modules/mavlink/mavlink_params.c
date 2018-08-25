@@ -141,3 +141,27 @@ PARAM_DEFINE_INT32(MAV_FWDEXTSP, 1);
  * @group MAVLink
  */
 PARAM_DEFINE_INT32(MAV_BROADCAST, 0);
+
+/**
+ * Disable parameter hash check.
+ *
+ * Disabling the parameter hash check functionality will make the mavlink instance
+ * stream parameters continuously.
+ *
+ * @value 0 Hash check enabled.
+ * @value 1 Hash check disabled.
+ * @group MAVLink
+ */
+PARAM_DEFINE_INT32(MAV_DIS_HASH_CHK, 0);
+
+/**
+ * Disable hearbeat message forwarding.
+ *
+ * The mavlink hearbeat message will not be forwarded if this parameter is set to 'disabled'.
+ * The main reason for disabling heartbeats to be forwarded is because they confuse dronekit.
+ *
+ * @value 0 Forwarding enabled.
+ * @value 1 Forwarding disabled.
+ * @group MAVLink
+ */
+PARAM_DEFINE_INT32(MAV_DIS_HB_FORW, 0);
